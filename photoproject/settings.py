@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-041*_k8_=z2_%z16^q!kk^wa(8ka1eg%)fv7$zf(aqotpamzag'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -124,6 +124,8 @@ STATIC_URL = 'static/'
 # staticフォルダの場所を指定する
 # BASE_DIR = settings.pyまでのパスの親の親
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+STATIC_ROOT = BASE_DIR/"static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
